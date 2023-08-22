@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="login.css">
+   <script src="login.js"></script>
+   <title>DATASOFT-LOGIN</title>
+   <link rel="shortcut icon" href="./images/interface-control-svgrepo-com.png" type="image/x-icon">
+</head>
+
+<header>
+   <img src="../paginaprincipal/images/Data_Software__6_-removebg-preview.png" alt="">
+</header>
+
+<body>
+   <div class="mover">
+      <div class="title-text" style="text-decoration-line: underline; text-decoration-color:#001A49;">
+         <div class="title login">
+            Iniciar Sesion
+         </div>
+         <div class="title signup">
+            Crear cuenta
+         </div>
+      </div>
+      <div class="form-container">
+         <div class="slide-controls">
+            <input type="radio" name="slide" id="login">
+            <input type="radio" name="slide" id="signup">
+            <label for="login" class="slide login">Iniciar Sesion</label>
+            <label for="signup" class="slide signup">Registrate</label>
+            <div class="slider-tab"></div>
+         </div>
+         <div class="form-inner">
+            <form action="" class="login">
+               <div class="field">
+                  <label for=""></label>
+                  <input type="text" placeholder="Nombre o Usuario" id="nombre">
+               </div>
+               <div class="field">
+                  <label for=""></label>
+                  <input type="password" placeholder="Contraseña" id="contra">
+               </div>
+               <div class="pass-link">
+                  <a href="#">¿Has olvidado tu contraseña?</a>
+               </div>
+               <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="button" onclick="login();" value="Abrir">
+               </div>
+               <div class="signup-link">
+                  ¿No tienes una cuenta? <a href="#">Crea una</a>
+               </div>
+            </form>
+            <form action="" class="signup">
+               <div class="field">
+                  <input type="email" placeholder="Correo">
+               </div>
+               <div class="field">
+                  <input type="text" placeholder="Nombre">
+               </div>
+               <div class="field">
+                  <input type="password" placeholder="Contraseña">
+               </div>
+               <div class="field btn">
+                  <div class="btn-layer"></div>
+                  <input type="button" value="Crear" onclick="crear()">
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   <script>
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = (() => {
+         loginForm.style.marginLeft = "-50%";
+         loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (() => {
+         loginForm.style.marginLeft = "0%";
+         loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (() => {
+         signupBtn.click();
+         return false;
+      });
+   </script>
+</body>
+
+</html>

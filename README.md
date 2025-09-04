@@ -1,0 +1,1 @@
+Bienvenidos a mi primer proyecto en el área, hecho con mucho cariño con los lenguajes mas basicos, HTML (aunque no lo sea jajaja) CSS y Javascript para una web sencilla de venta de cursos y programas en linea
